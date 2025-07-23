@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test2-app
+  namespace: test-app
+  labels:
+    app: test2-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test2-app
+  template:
+    metadata:
+      labels:
+        app: test2-app
+    spec:
+      containers:
+      - name: test2-app
+        image: ghcr.io/mswootest/test2:latest
+        ports:
+        - containerPort: 8000

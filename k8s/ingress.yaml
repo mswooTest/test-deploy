@@ -15,7 +15,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: pomotodo-service
+            name: test2-service
             port:
               number: 80
   - http:
@@ -24,6 +24,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: pomotodo-service
+            name: test2-service
             port:
               number: 80

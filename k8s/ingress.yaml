@@ -4,17 +4,16 @@ metadata:
   name: test2-ingress
   namespace: test-app
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: traefik
 spec:
-  ingressClassName: nginx
   rules:
-  - host: pomotodo.duckdns.org
+  - host: pomotodo-dev.duckdns.org
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: test2-service
+            name: pomotodo-service
             port:
               number: 80

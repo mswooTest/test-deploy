@@ -4,13 +4,8 @@ metadata:
   name: test2-ingress
   namespace: test-app
   annotations:
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: traefik
-  # tls:
-  # - hosts:
-  #   - pomotodo.duckdns.org
-  #   secretName: test2-tls
   rules:
   # 외부 팀원용 도메인
   - host: pomotodo.duckdns.org
